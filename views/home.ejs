@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Home</title>
+</head>
+<body>
+    <%-include("navbar") %>
+    <%-include("sidebar") %>
+    <div class="content">
+        <div class="recgames">
+            <div class="seegamesdiv">
+                <a href="/showgames"><button>See All Games</button></a>
+            </div>
+            <div class="gamesdiv">
+                <% for (let game of recomendedgames ) {%>
+                    <div>
+                        <h4><%=game.name %></h4>
+                        <p><b>Genre:</b> <%=game.genre %></p>
+                        <a href="/showgame/<%=game.name %>" class="openbtn">open</a>
+                    </div>
+
+                <% } %>
+            
+            </div>
+            <div class="addgamediv">
+                <a href="/addgame"><button>Add a Game</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

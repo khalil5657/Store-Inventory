@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+
+</head>
+<body>
+    <%-include("navbar") %>
+    <%-include("sidebar") %>
+    <div class="content">
+        <form action="/edit/<%=category %>/<%=name %>" method="post">
+            <label for="">Edit</label>
+            <input type="text" value="<%=name %>" name="name">
+            <button type="submit">B</button>
+        </form>
+    </div>
+</body>
+</html>

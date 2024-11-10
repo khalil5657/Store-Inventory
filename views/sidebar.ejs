@@ -1,0 +1,23 @@
+<div class="side-bar">
+    
+        <a >
+            <div>Genre <a href="/add/genre" class="openbtn">+</a></div>
+        </a>
+        <div class="genres">
+            <% for (let i=0; i<genres.length;i++) {%>
+                <div>
+                <a href="/category/<%=genres[i].name %>"><%=genres[i].name %></a><span style="display: inline-block;"><a href="/delete/genre/<%=genres[i].name %>" style="display: inline-block;">-</a></span><span style="display: inline-block;"><a href="/edit/genre/<%=genres[i].name %>" style="display: inline-block;">:</a></span>
+                </div><% } %>
+        </div>
+        <a>
+            <div>Devlopers <a href="/add/devlopers" class="openbtn">+</a></div>
+        </a>
+        <div class="devs">
+            <% for (let i=0; i<devlopers.length;i++) {%>
+                <div>
+                <a href="/category/<%=devlopers[i].name %>"><%=devlopers[i].name %></a><span style="display: inline-block;"><a href="/delete/devlopers/<%=devlopers[i].name %>" style="display: inline-block;">-</a></span><span style="display: inline-block;"><a href="/edit/devlopers/<%=devlopers[i].name %>" style="display: inline-block;">:</a></span>
+            </div>
+                <% } %>
+        </div>
+
+</div>

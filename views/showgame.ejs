@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <%-include("navbar") %>
+    <%-include("sidebar") %>
+    <div class="content">
+        <%=game.rows[0].name %>
+        <%=game.rows[0].genre %>
+        <%=game.rows[0].devlopers %>
+        <a href="/editgame/<%=game.rows[0].name %>" class="openbtn">Edit</a>
+        <a href="/deletegame/<%=game.rows[0].name %>" class="openbtn">Delete</a>
+
+    </div>
+</body>
+</html>

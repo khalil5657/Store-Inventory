@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <%-include("navbar") %>
+    <%-include("sidebar") %>
+    <div class="content">
+        <div class="title"><%=title %></div>
+        <div class="allgames">
+        <% for (let i=0;i<table.length;i++) {%>
+            <!-- <h4><%=table[i].name %></h4> -->
+            <div>
+                <h4><%=table[i].name %></h4>
+                <p><b>Genre:</b> <%=table[i].genre %></p>
+                <a href="/showgame/<%=table[i].name %>" class="openbtn">open</a>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
